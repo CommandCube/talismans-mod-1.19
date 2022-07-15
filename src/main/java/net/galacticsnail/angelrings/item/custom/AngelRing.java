@@ -9,6 +9,8 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ItemStack;
@@ -42,23 +44,32 @@ public class AngelRing extends TrinketItem {
     //@Override
     public void tick(ItemStack stack, SlotReference slot, LivingEntity entity) {
         PlayerEntity player = (PlayerEntity) entity;
-        //if the instance of the object has isDurable set to true, the item will eventually break
+        //if the instance of the object has isDurable set to true, the item will drain xp to fly
         if (isDurable && player.getAbilities().flying) {
             //will take additional durability off if player is sprinting
+            float experienceDamage = 0;
             if (player.isSprinting()) {
-                //will damage ring 2% of time
-                if (Math.random() < 0.02) {
-                    stack.damage(2, player, e -> e.sendEquipmentBreakStatus(EquipmentSlot.LEGS));
-                }
+                experienceDamage = 1.4f/50;
+            } else {
+                experienceDamage = 1f/50;
             }
-            //logic for when player is not sprint flying
-            else {
-                if (Math.random() < 0.02) {
-                    stack.damage(1, player, e -> e.sendEquipmentBreakStatus(EquipmentSlot.LEGS));
+            if (player.experienceProgress < experienceDamage && player.experienceLevel > 0) {
+                player.experienceLevel --;
+                player.experienceProgress = 1f;
+            } else if (player.experienceProgress > experienceDamage) {
+                player.experienceProgress -= experienceDamage;
+            } else if (player.experienceProgress < experienceDamage && player.experienceLevel <= 0) {
+                player.experienceProgress = 0f;
+                if (!player.getAbilities().creativeMode && !player.isSpectator()) {
+                    player.getAbilities().allowFlying = false;
+                    player.getAbilities().flying = false;
+                    player.sendAbilitiesUpdate();
+
                 }
             }
 
         }
+
     }
 
     //@Override

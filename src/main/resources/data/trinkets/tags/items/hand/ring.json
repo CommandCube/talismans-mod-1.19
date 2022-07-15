@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "angelrings:angel_ring"
+    "angelrings:angel_ring",
+    "angelrings:angel_ring_breakable"
   ]
 }
