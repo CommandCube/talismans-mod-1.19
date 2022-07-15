@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "F": {
+      "item": "minecraft:feather"
+    },
+    "G": {
+      "item": "minecraft:iron_ingot"
+    },
+    "N": {
+      "item": "minecraft:netherite_ingot"
+    }
+  },
+  "pattern": [
+    "FGF",
+    "G G",
+    "GNG"
+  ],
+  "result": {
+    "item": "angelrings:angel_ring_breakable"
+  }
+}

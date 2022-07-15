@@ -1,0 +1,11 @@
+{
+  "entities": [
+    "player"
+  ],
+  "slots": [
+    "feet/aglet",
+    "hand/glove",
+    "hand/ring",
+    "head/hat"
+  ]
+}
