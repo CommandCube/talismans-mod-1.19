@@ -5,6 +5,7 @@ import com.google.common.collect.Multimap;
 import com.google.common.collect.Multimaps;
 
 import dev.emi.trinkets.api.*;
+import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
@@ -14,16 +15,17 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ItemStack;
+import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.minecraft.item.Item;
+import net.minecraft.world.World;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 public class AngelRing extends TrinketItem {
-//    public AngelRing(Settings settings) {
-//        super(settings);
-//    }
     public boolean isDurable;
     public AngelRing(Settings settings, boolean isDurable) {
         super(settings);
@@ -40,6 +42,16 @@ public class AngelRing extends TrinketItem {
 //        return map;
 //    }
 
+
+    @Override
+    public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
+        if (!isDurable) {
+            //Uses lang file to specify tooltip to allow additional languages
+            tooltip.add(Text.translatable("item.angelrings.angel_ring.tooltip"));
+        } else {
+            tooltip.add(Text.translatable("item.angelrings.angel_ring_breakable.tooltip"));
+        }
+    }
 
     //@Override
     public void tick(ItemStack stack, SlotReference slot, LivingEntity entity) {

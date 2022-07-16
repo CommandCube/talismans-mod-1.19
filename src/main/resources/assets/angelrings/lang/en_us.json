@@ -1,4 +1,6 @@
 {
   "item.angelrings.angel_ring": "Angel Ring",
-  "item.angelrings.angel_ring_breakable": "Fragile Angel Ring"
+  "item.angelrings.angel_ring_breakable": "Fragile Angel Ring",
+  "item.angelrings.angel_ring.tooltip": "§7Allows the user to fly!",
+  "item.angelrings.angel_ring_breakable.tooltip": "§7Uses XP to fly!"
 }
