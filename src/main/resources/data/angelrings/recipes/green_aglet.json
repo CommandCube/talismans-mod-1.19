@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "V": {
+      "item": "minecraft:vine"
+    },
+    "B": {
+      "item": "minecraft:bamboo"
+    },
+    "A": {
+      "item": "angelrings:aglet"
+    }
+  },
+  "pattern": [
+    "VBV",
+    "BAB",
+    "VBV"
+  ],
+  "result": {
+    "item": "angelrings:green_aglet"
+  }
+}

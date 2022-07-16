@@ -2,5 +2,15 @@
   "item.angelrings.angel_ring": "Angel Ring",
   "item.angelrings.angel_ring_breakable": "Fragile Angel Ring",
   "item.angelrings.angel_ring.tooltip": "§7Allows the user to fly!",
-  "item.angelrings.angel_ring_breakable.tooltip": "§7Uses XP to fly!"
+  "item.angelrings.angel_ring_breakable.tooltip": "§7Uses XP to fly!",
+  "item.angelrings.aglet": "Aglet",
+  "item.angelrings.green_aglet": "Green Aglet",
+  "item.angelrings.red_aglet": "Red Aglet",
+  "item.angelrings.blue_aglet": "Blue Aglet",
+  "item.angelrings.super_aglet": "Super Aglet",
+  "item.angelrings.aglet.tooltip": "§7Allows the user to run slightly faster.",
+  "item.angelrings.green_aglet.tooltip": "§7Allows the user to run very fast on grass blocks.",
+  "item.angelrings.red_aglet.tooltip": "§7Allows the user to run faster.",
+  "item.angelrings.blue_aglet.tooltip": "§7Allows the user to run very fast.",
+  "item.angelrings.super_aglet.tooltip": "§7Allows the user to run extremely fast."
 }

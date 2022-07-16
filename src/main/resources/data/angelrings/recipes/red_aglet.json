@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "B": {
+      "item": "minecraft:redstone_block"
+    },
+    "A": {
+      "item": "angelrings:aglet"
+    }
+  },
+  "pattern": [
+    "RBR",
+    "BAB",
+    "RBR"
+  ],
+  "result": {
+    "item": "angelrings:red_aglet"
+  }
+}

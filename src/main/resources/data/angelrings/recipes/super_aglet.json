@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": {
+      "item": "angelrings:aglet"
+    },
+    "B": {
+      "item": "angelrings:red_aglet"
+    },
+    "C": {
+      "item": "angelrings:green_aglet"
+    },
+    "D": {
+      "item": "angelrings:blue_aglet"
+    },
+    "N": {
+      "item": "minecraft:nether_star"
+    }
+  },
+  "pattern": [
+    " A ",
+    "BNC",
+    " D "
+  ],
+  "result": {
+    "item": "angelrings:super_aglet"
+  }
+}
